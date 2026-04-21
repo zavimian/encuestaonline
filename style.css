@@ -1,12 +1,12 @@
 :root {
-    --bg-color: #02040a;
+    --bg-color: #05010a;
     --card-bg: rgba(255, 255, 255, 0.03);
-    --border-color: rgba(65, 105, 225, 0.2);
-    --royal-blue: #4169e1;
-    --dodger-blue: #1e90ff;
-    --deep-sky-blue: #00bfff;
+    --border-color: rgba(255, 20, 147, 0.2);
+    --primary-violet: #9d50bb;
+    --primary-pink: #ff1493;
+    --accent-purple: #6e48aa;
     --text-primary: #ffffff;
-    --text-secondary: #a0aec0;
+    --text-secondary: #cba6f7;
     --glass-blur: blur(16px);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -38,8 +38,8 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: radial-gradient(circle at 20% 30%, rgba(65, 105, 225, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(30, 144, 255, 0.1) 0%, transparent 40%);
+    background: radial-gradient(circle at 20% 30%, rgba(157, 80, 187, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 20, 147, 0.1) 0%, transparent 40%);
     animation: pulseGlow 10s ease-in-out infinite alternate;
 }
 
@@ -73,8 +73,8 @@ body {
 }
 
 .title span {
-    color: var(--royal-blue);
-    background: linear-gradient(90deg, var(--royal-blue), var(--deep-sky-blue));
+    color: var(--primary-pink);
+    background: linear-gradient(90deg, var(--primary-pink), var(--primary-violet));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -121,9 +121,9 @@ input[type="text"], textarea {
 
 input[type="text"]:focus, textarea:focus {
     outline: none;
-    border-color: var(--royal-blue);
+    border-color: var(--primary-pink);
     background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 0 0 4px rgba(65, 105, 225, 0.1);
+    box-shadow: 0 0 0 4px rgba(255, 20, 147, 0.1);
 }
 
 textarea {
@@ -173,15 +173,15 @@ textarea {
 }
 
 .option:hover span {
-    border-color: var(--royal-blue);
-    color: var(--royal-blue);
+    border-color: var(--primary-pink);
+    color: var(--primary-pink);
 }
 
 .option input:checked + span {
-    background: var(--royal-blue);
-    border-color: var(--royal-blue);
+    background: linear-gradient(135deg, var(--primary-pink), var(--primary-violet));
+    border-color: var(--primary-pink);
     color: white;
-    box-shadow: 0 0 20px rgba(65, 105, 225, 0.4);
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.4);
 }
 
 .rating-desc {
@@ -196,7 +196,7 @@ textarea {
 .submit-btn {
     width: 100%;
     padding: 1.25rem;
-    background: var(--royal-blue);
+    background: linear-gradient(90deg, var(--primary-violet), var(--primary-pink));
     color: white;
     border: none;
     border-radius: 12px;
@@ -210,9 +210,9 @@ textarea {
 }
 
 .submit-btn:hover {
-    background: var(--dodger-blue);
+    filter: brightness(1.1);
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(65, 105, 225, 0.4);
+    box-shadow: 0 10px 25px rgba(255, 20, 147, 0.4);
 }
 
 .submit-btn:active {
@@ -244,7 +244,7 @@ textarea {
 
 .check-icon {
     font-size: 4rem;
-    color: #4ade80;
+    color: #ff1493;
     margin-bottom: 1.5rem;
 }
 
@@ -252,15 +252,15 @@ textarea {
     margin-top: 2rem;
     padding: 0.75rem 1.5rem;
     background: transparent;
-    color: var(--royal-blue);
-    border: 1px solid var(--royal-blue);
+    color: var(--primary-pink);
+    border: 1px solid var(--primary-pink);
     border-radius: 8px;
     cursor: pointer;
     transition: var(--transition);
 }
 
 .secondary-btn:hover {
-    background: rgba(65, 105, 225, 0.1);
+    background: rgba(255, 20, 147, 0.1);
 }
 
 @media (max-width: 480px) {
